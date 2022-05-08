@@ -3,8 +3,28 @@
 let nav = document.getElementById("navigation");
 let openMenuBtn = document.querySelector(".open-menu");
 let closeMenuBtn = document.querySelector(".close-menu");
+let backToTopButton = document.getElementById("backToTopButton");
 
+onScroll();
 function onScroll() {
+  showNavOnScroll();
+  showBackToTopButtonOnScroll();
+}
+
+function showBackToTopButtonOnScroll() {
+  if (scrollY > 500) {
+    backToTopButton.classList.add("show");
+    if (scrollY > 4480) {
+      backToTopButton.classList.add("onFooter");
+    } else {
+      backToTopButton.classList.remove("onFooter");
+    }
+  } else {
+    backToTopButton.classList.remove("show");
+  }
+}
+
+function showNavOnScroll() {
   if (scrollY != 0) {
     nav.classList.add("scroll");
   } else {
@@ -16,7 +36,7 @@ function controlMenu() {
   document.querySelector("body").classList.toggle("menu-expanded");
 }
 
-document.addEventListener("scroll", onScroll);
+window.addEventListener("scroll", onScroll);
 openMenuBtn.addEventListener("click", controlMenu);
 closeMenuBtn.addEventListener("click", controlMenu);
 

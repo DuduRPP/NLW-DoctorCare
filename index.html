@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DoctorCare</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body class="">
@@ -64,14 +64,12 @@
         </a>
         <div class="menu">
           <ul>
-            <li><a onclick="controlMenu()" href="#home">Início</a></li>
-            <li><a onclick="controlMenu()" href="#services">Serviços</a></li>
-            <li><a onclick="controlMenu()" href="#about">Sobre</a></li>
+            <li><a onclick="closeMenu()" href="#home">Início</a></li>
+            <li><a onclick="closeMenu()" href="#services">Serviços</a></li>
+            <li><a onclick="closeMenu()" href="#about">Sobre</a></li>
           </ul>
 
-          <a href="#contact" onclick="controlMenu()" class="button"
-            >Agende sua consulta</a
-          >
+          <a href="#contact" onclick="" class="button">Agende sua consulta</a>
 
           <ul class="social-links">
             <li>
@@ -709,6 +707,6 @@
 
     <!--ScrollReveal Lib-->
     <script src="https://unpkg.com/scrollreveal"></script>
-    <script src="main.js"></script>
+    <script src="./main.js"></script>
   </body>
 </html>

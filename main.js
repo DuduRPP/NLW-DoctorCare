@@ -69,13 +69,16 @@ function showNavOnScroll() {
   }
 }
 
-function controlMenu() {
-  document.querySelector("body").classList.toggle("menu-expanded");
+function closeMenu() {
+  document.querySelector("body").classList.remove("menu-expanded");
+}
+function openMenu() {
+  document.querySelector("body").classList.add("menu-expanded");
 }
 
 window.addEventListener("scroll", onScroll);
-openMenuBtn.addEventListener("click", controlMenu);
-closeMenuBtn.addEventListener("click", controlMenu);
+openMenuBtn.addEventListener("click", openMenu);
+closeMenuBtn.addEventListener("click", closeMenu);
 
 //ScrollReveal
 
